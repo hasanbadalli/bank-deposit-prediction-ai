@@ -100,35 +100,40 @@ Pipeline([
     ("scaler", StandardScaler()),
     ("svc", SVC(kernel="rbf", class_weight={0:1, 1:3}))
 ])
-Final Results
+```
+### Final Results
 Class 0: Precision 0.96 | Recall 0.91 | F1 0.94
 Class 1: Precision 0.52 | Recall 0.72 | F1 0.60
 
 Accuracy: 0.89
 Final Minority F1: 0.6006
-Key Takeaways
-Accuracy alone is unreliable for imbalanced data.
 
-Class weighting significantly improves recall.
+---
+## Key Takeaways
 
-Threshold tuning provides additional F1 gains.
+- Accuracy alone is unreliable for imbalanced data.
+- Class weighting significantly improves recall.
+- Threshold tuning provides additional F1 gains.
+- SVM performs well on tabular data with proper scaling.
 
-SVM performs well on tabular data with proper scaling.
+---
 
-Future Improvements
-XGBoost / LightGBM
+## Future Improvements
 
-SMOTE
+- XGBoost / LightGBM  
+- SMOTE  
+- SHAP explainability  
+- Nested cross-validation  
+- Gamma + C hyperparameter tuning  
 
-SHAP explainability
+---
 
-Nested cross-validation
-
-Gamma + C hyperparameter tuning
-
-How to Run
+## How to Run
+```bash
 pip install -r requirements.txt
 jupyter notebook
-Author
+```
+
+## Author
 Hasan Badalli
 Machine Learning / Software Engineering
